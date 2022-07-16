@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Réplique-Tripadvisor</title>
+    <!-- <link rel="stylesheet" href="./Assets/CSS/reset.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css" /> -->
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <script src="https://kit.fontawesome.com/e2897e8bf5.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./Assets/front-end.js"></script>
+</head>
+<body>
+    <div id="formhold" class="hidden">
+        <form id="login"  >
+            <h4>Firstname</h4>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            value=""
+            placeholder="Bat"
+          /><br />
+          <h4>Lastname</h4>
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            value=""
+            placeholder="Man"
+          /><br />
+          <h4>Email</h4>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value=""
+            placeholder="bat@mail.com"
+          /><br />
+          <h4>Subject</h4>
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            value=""
+            placeholder="confirmation"
+          /><br />
+          Your message
+          <textarea id="messagehold"
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Écrivez votre message ici..."
+          >Ceci est un message par défaut</textarea
+          ><br />
+          <button id="submitform" type="submit">Envoyer le message</button>
+        </form>
+      </div>
+<!-- HEADER -->
+<header class="container">
+        <div>
+            <img id="logo2" src="./Assets/CSS/images/logo-solo.png" alt="">
+            <img id="logo1" src="./Assets/CSS/images/logo Tripadvisor.svg" alt="">
+            <div id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="" id="">
+            </div>
+        </div>
+        <nav id="button-kit1">
+            <button> <i class="fa-solid fa-pencil"></i><p>Avis</p></button>
+            <button> <i class="fa-solid fa-bell "></i><p>Alerte</p></button>
+            <button> <i class="fa-regular fa-heart"></i><p>Favoris</p></button>
+            <button id="connect"> <p>Connectez-vous</p></button>
+        </nav>
+</header>
+<!-- MAIN -->
+<main class="container">
+    <h1><span class="tacolor">Explorez </span>Paris</h1>
+    <!-- BUTTUN-KIT2 -->
+    <div id="menu">
+        <nav id="button-kit2">
+            <button><p>Hôtels</p><i class="fa-solid fa-bed"></i></button>
+            <button><p>Locations de vacances</p><i class="fa-solid fa-house-circle-check"></i></button>
+            <button><p>Activités</p><i class="fa-solid fa-ticket"></i></i></button>
+            <button><P>Restaurants</P><i class="fa-solid fa-utensils"></i></button>
+            <button><p>Forums de voyage</p><i class="fa-solid fa-comment-dots"></i></button>
+            <button class="hiden"><p>vol</p><i class="fa-solid fa-plane"></i></button>
+            <button class="hiden"><p>croisière</p><i class="fa-solid fa-ship"></i></button>
+            <button><p>plus</p><i class="fa-solid fa-ellipsis"></i></button>
+        </nav>
+        <div id="left-arrow"><i class="fa-solid fa-arrow-left"></i></div>
+        <div id="right-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="degradeleft"></div><div class="degraderight"></div>
+    </div>
+    
+    <div id="vitrine" class="container">
+        <div>
+         <img src="./Assets/CSS/images/main photo.jpeg" alt="">
+        </div>
+        <div>
+         <img src="./Assets/CSS/images/second photo.jpeg" alt="">
+         <img src="./Assets/CSS/images/third photo.jpeg" alt="">
+        </div>
+    </div>
+    <div id="vitrine-text">
+        <h6>Europe > France > Ile-de-France > Paris v</h6>
+        <h6>Visiter : Paris</h6>
+    </div>
+    <div id="infos-map">
+        <div class="description">
+            <h2>La Ville Lumière en tout point</h2>
+            <p>Aucun autre endroit au monde ne fait autant rêver que Paris. La ville séduit par son art, son architecture, sa culture et sa cuisine, mais il y a aussi des merveilles plus discrètes qui n’attendent qu’à être explorées : les ruelles pavées pittoresques, les pâtisseries au coin de la rue et les petits bistrots douillets qui vous invitent à boire un verre de beaujolais. Préparez-vous à vous approprier Paris.</p>
+        </div>
+        <div>
+            <!-- ici la map google -->
+        </div>
+    </div>
+    <h2>Paris: les immanquables</h2>
+    <!-- CARROUSSEL 1 -->
+    <div id="carroussel">
+        <div>
+            <h3>Se divertir</h3>
+            <p>Des lieux à voir, des rues à explorer et des expériences emblématiques à Paris.</p>
+            <button>Tout afficher</button>
+        </div>
+        <div class="carouhold">         
+            <ul>
+                <li class="caroukit">
+                    <div>
+                        <img src="./Assets/CSS/images/musée-louvres.jpeg" alt=""> 
+                        <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                        <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                    </div>  
+                    <h4>Musée du Louvre</h4>
+                    <div class="ratings">
+                        <div><i class="fa-solid fa-circle"></i>
+                            <i class="fa-solid fa-circle-half-stroke"></i>
+                            <i class="fa-regular fa-circle"></i></div>
+                            <p>145 987</p>
+                     </div>
+                    <p>Bâtiments architecturaux, Musées d'art</p>
+                    </li>
+                <li class="caroukit">
+                    <div>
+                        <img src="./Assets/CSS/images/tour-eifel.jpeg" alt="">
+                        <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                        <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                    </div> 
+                    <h4>Tour Eiffel</h4>
+                    <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                         <i class="fa-solid fa-circle-half-stroke"></i>
+                         <i class="fa-regular fa-circle"></i></div>
+                           <p>145 987</p>
+                    </div>
+                    <p>Tours et plateformes d'observation, Monuments & Points d'intérêts</p>
+                </li>
+                <li class="caroukit">
+                    <div>
+                        <img src="./Assets/CSS/images/arc-triomphe.jpeg" alt="">
+                        <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                        <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                    </div>
+                    <h4>L'arc de Triomphe</h4>
+                    <div class="ratings">
+                        <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                        <p>145 987</p>
+                    </div>
+                    <p>Bâtiments architecturaux, Sites historiques</p>
+                </li>
+                <li class="caroukit">
+                    <div>
+                        <img src="./Assets/CSS/images/notre-dame.jpeg" alt="">
+                        <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                        <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                    </div>
+                    <h4>Notre-Dame de Paris</h4>
+                    <div class="ratings">
+                        <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                        <p>145 987</p>
+                    </div>
+                    <p>Bâtiments architecturaux, Sites historiques</p>
+                </li>
+                <li class="caroukit">
+                    <div>
+                        <img src="./Assets/CSS/images/orsay.jpeg" alt="">
+                        <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                        <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                    </div>
+                    <h4>Musée d'Orsay</h4>
+                    <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                        <p>145 987</p>
+                    </div>
+                    <p>Musées d'art</p>
+                </li>
+                <li class="caroukit">
+                    <div>
+                        <img src="./Assets/CSS/images/rodin.jpeg" alt="">
+                        <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                        <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                    </div>
+                    <h4>Musée Rodin</h4>
+                    <div class="ratings">
+                        <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                        <p>145 987</p>
+                    </div>
+                    <p>Musées spécialisés</p>
+                </li>
+                <li class="caroukit">
+                    <div>
+                        <img src="./Assets/CSS/images/the-bookstore.jpeg" alt="">
+                        <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                        <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                    </div>
+                    <h4>La Boutique à vieux bouquins</h4>
+                    <div class="ratings">
+                        <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                        <p>145 987</p>
+                    </div>
+                    <p>Bibliothèques, Grands magasins</p>
+                </li>
+            </ul>
+            <div id="left-arrow2"><i class="fa-solid fa-arrow-left"></i></div>
+            <div id="right-arrow2"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+    </div>
+    <!-- CARROUSSEL 2 -->
+    <div id="carroussel">
+        <div>
+            <h3>Se reposer</h3>
+            <p>Un mélange de charme, de symboles et de modernité.</p>
+            <button>Tout afficher</button>
+        </div>
+        <div class="carouhold">   
+            <ul>
+                <li class="caroukit">
+                    <div>
+                        <img src="./Assets/CSS/images/repos-1.jpeg" alt=""> 
+                        <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                        <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                     </div>  
+                    <h4>Le Bristol Paris</h4>
+                    <div class="ratings">
+                        <div><i class="fa-solid fa-circle"></i>
+                            <i class="fa-solid fa-circle-half-stroke"></i>
+                            <i class="fa-regular fa-circle"></i>
+                        </div>
+                        <p>145 987</p>
+                    </div>
+                    <p>Tours et plateformes d'observation, Monuments & Points d'intérêts</p>
+            </li>
+            <li class="caroukit">
+                <div>
+                    <img src="./Assets/CSS/images/repos-2.jpeg" alt="">
+                    <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                    <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+               </div>  
+                <h4>Laréserve Paris - Hotel and  Spa</h4>
+                <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                    <p>145 987</p>
+                </div>
+                <p></p>
+            </li>
+            <li class="caroukit">
+                <div>
+                    <img src="./Assets/CSS/images/repos-3.jpeg" alt="">
+                    <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                    <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                </div>
+                <h4>Four Seasons Hotel George V</h4>
+                <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                    <p>145 987</p>
+                </div>
+                <p></p>
+            </li>
+            <li class="caroukit">
+                <div>
+                    <img src="./Assets/CSS/images/repos-4.jpeg" alt="">
+                    <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                    <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                </div>
+                <h4>Hôtel de Crillon, A Rosewood Hotel</h4>
+                <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                    <p>145 987</p>
+                </div>
+                <p></p>
+            </li>
+            <li class="caroukit">
+                <div>
+                    <img src="./Assets/CSS/images/repos-5.jpeg" alt="">
+                    <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                    <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                </div>
+                <h4>Le Maurice</h4>
+                <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                    <p>145 987</p>
+                </div>
+                <p></p>
+            </li>
+            <li class="caroukit">
+                <div>
+                    <img src="./Assets/CSS/images/repos-6.jpeg" alt="">
+                    <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                    <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                </div>
+                <h4>Hotel des Grands Boulevards</h4>
+                <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                    <p>145 987</p>
+                </div>
+                <p></p>
+            </li>
+            <li class="caroukit">
+                <div>
+                    <img src="./Assets/CSS/images/repos-7.jpeg" alt="">
+                    <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                    <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                </div>
+                <h4>The Hoxton, Paris</h4>
+                <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                    <p>145 987</p>
+                </div>
+                <p></p>
+            </li>
+        </ul>
+        <div id="left-arrow2"><i class="fa-solid fa-arrow-left"></i></div>
+            <div id="right-arrow2"><i class="fa-solid fa-arrow-right"></i></div>
+    </div>
+    </div>
+    <!-- CARROUSSEL 3 -->
+    <div id="carroussel">
+        <div>
+            <h3>Se tromper de bus</h3>
+            <p>et bla bla bla </p>
+            <button>Tout afficher</button>
+        </div>
+        <div class="carouhold">   
+        <ul>
+            <li class="caroukit">
+                <div>
+                     <img src="./Assets/CSS/images/musée-louvres.jpeg" alt=""> 
+                     <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                     <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                </div>  
+                <h4>Musée du Louvre</h4>
+                <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                    <p>145 987</p>
+                </div>
+                <p>Tours et plateformes d'observation, Monuments & Points d'intérêts</p>
+            </li>
+            <li class="caroukit">
+                <div>
+                    <img src="./Assets/CSS/images/tour-eifel.jpeg" alt="">
+                    <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                    <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+               </div>  
+                <h4>tour eifel</h4>
+                <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                    <p>145 987</p>
+                </div>
+                <p></p>
+            </li>
+            <li class="caroukit">
+                <div>
+                    <img src="./Assets/CSS/images/arc-triomphe.jpeg" alt="">
+                    <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                    <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                </div>
+                <h4>L'arc de Triomphe</h4>
+                <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                    <p>145 987</p>
+                </div>
+                <p></p>
+            </li>
+            <li class="caroukit">
+                <div>
+                    <img src="./Assets/CSS/images/notre-dame.jpeg" alt="">
+                    <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                    <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                </div>
+                <h4>Notre-Dame de Paris</h4>
+                <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                    <p>145 987</p>
+                </div>
+                <p></p>
+            </li>
+            <li class="caroukit">
+                <div>
+                    <img src="./Assets/CSS/images/orsay.jpeg" alt="">
+                    <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                    <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                </div>
+                <h4>Musée d'Orsay</h4>
+                <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                    <p>145 987</p>
+                </div>
+                <p></p>
+            </li>
+            <li class="caroukit">
+                <div>
+                    <img src="./Assets/CSS/images/rodin.jpeg" alt="">
+                    <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                    <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                </div>
+                <h4>Musée Rodin</h4>
+                <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                    <p>145 987</p>
+                </div>
+                <p></p>
+            </li>
+            <li class="caroukit">
+                <div>
+                    <img src="./Assets/CSS/images/the-bookstore.jpeg" alt="">
+                    <div class="overimg"><i class="fa-regular fa-heart"></i></div>
+                    <div class="label-2022"><img src="./Assets/CSS/images/logo-solo.png" alt=""><p>2022</p></div>
+                </div>
+                <h4>La Boutique à vieux bouquins</h4>
+                <div class="ratings">
+                    <div><i class="fa-solid fa-circle"></i>
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                        <i class="fa-regular fa-circle"></i></div>
+                    <p>145 987</p>
+                </div>
+                <p></p>
+            </li>
+        </ul><div id="left-arrow2"><i class="fa-solid fa-arrow-left"></i></div>
+        <div id="right-arrow2"><i class="fa-solid fa-arrow-right"></i></div>
+    </div>
+    </div>
+</main>
+<!-- FOOTER -->
+<footer class="container">
+</footer>
+</body>
+</html>
