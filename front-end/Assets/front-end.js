@@ -8,7 +8,7 @@ $.addEventListener("DOMContentLoaded", () => {
     // window.onload = () => setTimeout(afficher, 5000);
   });
 
-  $.querySelector("#contactForm").addEventListener("submit", async (event) => {
+  $.querySelector("#login").addEventListener("submit", async (event) => {
     // Je veux empêcher le rafraichissment de la page
     event.preventDefault();
     //je fais une requète axios
