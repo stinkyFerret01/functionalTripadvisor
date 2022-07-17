@@ -24,23 +24,36 @@ button {
     background-color: white;
     text-align: start;
 }
+button:hover {
+    cursor: pointer;
+}
+a:hover {
+    cursor: alias;
+}
 input {
     border: none;
     border-bottom: solid black 1px;
+}
+input:hover {
+    background-color: #EDEDED;
+}
+input:focus {
+    background-color: #333333;
+    opacity: 0.5;
+    color: white;
+    border: solid #333333 1px;
 }
 .container {
     max-width: 1107px;
 }
 .hidden {
     display: none;
-    transition-duration: 1.1s;
-    /* transform: translateX(500px); */
+    transition-duration: 0.7s;
 }
 .display {
     display: flex;
-    transition-duration: 0.7s;
-  /* transform: translateX(500px); */
-    animation-duration: 0.7s;
+    transition-duration: 0.2s;
+    animation-duration: 0.2s;
     animation-name: fondu;
 }
 /******/
@@ -172,7 +185,7 @@ header>div>div {
     position: fixed;
     -webkit-backdrop-filter: blur(10px); /* assure la compatibilité avec safari */
     backdrop-filter: blur(10px) /* grayscale(0.5) */ opacity(1);
-    /* background-color: rgba(241, 0, 0, 0.2); */
+    background-color: rgba(241, 0, 0, 0.1);
 
 }
 div #formhold {
@@ -180,6 +193,7 @@ div #formhold {
     left: 0
 }
 form {
+    position: relative;
     border-radius: 20px;
     height: 500px;
     width: 300px;
@@ -190,11 +204,31 @@ form {
     justify-content: space-around;
     align-items: center;
 }
-#messagehold {
+#message {
     resize: none;
 }
 #submitform {
     border: solid black 2px;
+}
+#cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    background-color: #FF5D5D;
+    opacity: 0.2;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+#cancel:hover {
+    background-color: #FF5D5D;
+    opacity: 1;
+    border: solid #333333 1px;
+
 }
 /************/
 /*___MAIN___*/
@@ -501,6 +535,60 @@ ul img {
 .ratings>p {
     font-size: 12px;
 }
+/**************/
+/*___FOOTER___*/
+footer {
+    width: calc(100% + 48px);
+    left: -50%;
+    height: 140px;
+    background-color: #EDEDED;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#promo {
+    line-height: 40px;
+    font-size: 11px;
+    text-align: center;
+}
+#promo-reacteur {
+    color: #5D48D2;
+    padding-left: 6px;
+}
+#promo-reacteur:hover {
+    background-color: #333333;
+}
+#promo-reacteur img {
+    border-radius: 10%;
+    width: 16px;
+}
+#promo-perso {
+    color: #0C66C2;
+    padding-left: 6px;
+}
+#promo-perso:hover {
+    background-color: #333333;
+}
+#promo-perso img {
+    width: 16px;
+}
+#promo-github {
+    color: darkorange;
+    padding-left: 6px;
+}
+#promo-github:hover {
+    background-color: #333333;
+}
+#promo-github img {
+    width: 16px;
+    border-radius: 50%;
+}
+footer img {
+    position: relative;
+    top: 4px
+}
+
 @media (max-width: 1107px) {
     #vitrine {
         height: 340px;

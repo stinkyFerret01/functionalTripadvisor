@@ -8,6 +8,10 @@ $.addEventListener("DOMContentLoaded", () => {
     // window.onload = () => setTimeout(afficher, 5000);
   });
 
+  $.querySelector("#cancel").addEventListener("click", () => {
+    $.querySelector(".hidden").classList.toggle("display");
+  });
+
   $.querySelector("#login").addEventListener("submit", async (event) => {
     // Je veux empêcher le rafraichissment de la page
     event.preventDefault();

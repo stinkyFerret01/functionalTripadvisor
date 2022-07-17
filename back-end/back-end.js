@@ -20,11 +20,13 @@ app.post("/send-email", (req, res) => {
     mg.messages
       .create(process.env.MAIL_GUN, {
         from: `${req.body.firstname} ${req.body.lastname} <${req.body.email}>`,
-        to: process.env.MAIL,
+        // to: process.env.MAIL,
+        to: req.body.email,
         subject: req.body.subject,
         text: req.body.message,
       })
-      .then((msg) => res.json(msg.message)) // logs response data
+      // .then((msg) => res.json(msg.message)) // logs response data
+      .then((msg) => res.json("vous vous êtes auto-Maillé!"))
       .catch((err) => res.json(err.message)); // logs any error
   } catch (error) {
     res.status(400).json(error.message);
